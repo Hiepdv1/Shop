@@ -1,0 +1,121 @@
+.container {
+    width: 86%;
+    margin: 0 auto;
+
+    .banner {
+        margin-top: 10.2rem;
+
+        .banner__img {
+            width: 100%;
+        }
+    }
+
+    .modify {
+        margin-top: 2rem;
+    }
+
+    .tranfer {
+        display: grid;
+        grid-template-columns: 69% 30%;
+        column-gap: 1%;
+        height: 550px;
+
+        .slide-left {
+            position: relative;
+            height: 100%;
+        }
+
+        .slide-right {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background-color: #FFF;
+
+            .content {
+                display: grid;
+                column-gap: 1%;
+                grid-template-columns: 44% 10% 44%;
+                height: 5rem;
+
+                .content-name {
+                    text-align: center;
+                    line-height: 5rem;
+                    color: #337ab7;
+                    background-color: #fdd504;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                }
+
+                .spec-note {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .dots {
+                        position: absolute;
+                        width: 11px;
+                        height: 11px;
+                        background-color: red;
+                        border-radius: 50%;
+                    }
+
+                    .ping {
+                        display: block;
+                        width: 15px;
+                        height: 15px;
+                        border: 1px solid #f33;
+                        opacity: 1;
+                        background-color: rgba(238,46,36,.2);
+                        border-radius: 100%;
+                        -webkit-animation-duration: 1.25s;
+                        animation-duration: 1.25s;
+                        -webkit-animation-name: ping;
+                        animation-name: ping;
+                        -webkit-animation-iteration-count: infinite;
+                        animation-iteration-count: infinite;
+                        -webkit-animation-timing-function: linear;
+                        animation-timing-function: linear;
+
+                        
+                    }                   
+                }
+
+                .content-title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: red;
+                    font-size: 1.4rem;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+
+    .banner-last-container {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        column-gap: 10%;
+
+        .banner-last {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@keyframes ping {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    
+    100% {
+        -webkit-transform: scale(3);
+        transform: scale(3);
+        opacity: 0;
+    }
+}

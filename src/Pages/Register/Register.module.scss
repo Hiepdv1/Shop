@@ -1,0 +1,102 @@
+.wrapper {
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+
+    .bg {
+        order: 2;
+        width: 50%;
+        .bg-img {
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .content {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+
+            .title-text {
+                font-size: 3.6rem;
+            }
+        }
+
+        .form {
+            width: 60%;
+            margin: 0 auto;
+
+            .form-group {
+                position: relative;
+                border: 1px solid;
+                border-color: #efefef;
+                border-radius: 8px;
+                padding: 1.5rem;
+
+                .title-input {
+                    color: #b3b3b3;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: .3s all ease;
+                    font-weight: bold;
+                    font-size: 1.8rem;
+                }
+
+                .input-text {
+                    font-size: 2rem;
+                    height: 46px;
+                    display: block;
+                    width: 100%;
+                    font-size: 1.8rem;
+                }
+
+                .input-text:valid {
+                    &:has(.form-group) {
+                        border-color: #1a73e8;
+                    }
+                }
+
+                .input-text:valid + .title-input {
+                    margin-top: -4rem;
+                    color: #1a73e8;
+                    background-color: #FFF;
+                }
+            }
+
+            .form-group + .form-group {
+                margin-top: 2rem;
+            }
+
+            .btn-login {
+                background-color: #007bff;
+
+                &:hover {
+                    background-color: #0069d9;
+                }
+            }
+
+            .no-account {
+                margin: 3rem 0;
+                text-align: center;
+                font-size: 1.8rem;
+            }
+
+            .btn-register {
+                background-color: #ea4335;
+
+                &:hover {
+                    background-color: #e82e1e;
+                }
+            }
+        }
+    }
+}
