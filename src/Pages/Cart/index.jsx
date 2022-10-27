@@ -8,6 +8,8 @@ const cl = classNames.bind(styles);
 function Cart() {
     const data = getItem();
 
+    console.log(data);
+
     return (
         <>
             {data?.length > 0 ? (

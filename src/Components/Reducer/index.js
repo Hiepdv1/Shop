@@ -7,8 +7,7 @@ const Reducer = (state = initialState, action) => {
     // eslint-disable-next-line default-case
     switch (action.type) {
         case 'ADD_CART':
-            const prevData = getItem() || []
-            setItem([...prevData, action.payload])
+            setItem(action.payload)
             return
         default:
             return state

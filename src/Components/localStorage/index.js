@@ -7,7 +7,10 @@ const getItem = () => {
 }
 
 const setItem = (item) => {
-    const jsonData = JSON.stringify(item)
+    const arr = getItem("Data_Order")
+    arr.push(item)
+
+    const jsonData = JSON.stringify(arr)
     return localStorage.setItem('Data_Order', jsonData)
 }
 

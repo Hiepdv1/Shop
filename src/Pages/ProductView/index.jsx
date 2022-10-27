@@ -150,7 +150,7 @@ function ProductView() {
                     </div>
 
                     <div className={cl('buy')}>
-                        <div onClick={() => handleOrder()} className={cl('add')}>
+                        <div onClick={handleOrder} className={cl('add')}>
                             <FontAwesomeIcon icon={faCartPlus} />
                             Thêm vào giỏ hàng
                         </div>
