@@ -17,6 +17,18 @@ const product_view_4 = require('../images/ProductsView/Product_1/bn4.jpeg')
 const product_view_5 = require('../images/ProductsView/Product_1/bn5.jpeg')
 const product_view_6 = require('../images/ProductsView/Product_1/bn6.jpeg')
 
+const product_view_7 = require('../images/ProductsView/Product_6/bn1.jpeg')
+const product_view_8 = require('../images/ProductsView/Product_6/bn2.jpeg')
+const product_view_9 = require('../images/ProductsView/Product_6/bn3.jpeg')
+const product_view_10 = require('../images/ProductsView/Product_6/bn4.jpeg')
+const product_view_11 = require('../images/ProductsView/Product_6/bn5.jpeg')
+const product_view_12 = require('../images/ProductsView/Product_6/bn6.jpeg')
+const product_view_13 = require('../images/ProductsView/Product_6/bn7.jpeg')
+const product_view_14 = require('../images/ProductsView/Product_6/bn8.jpeg')
+const product_view_15 = require('../images/ProductsView/Product_6/bn9.jpeg')
+
+
+
 const dataProduct = [
     {
         id: 1,
@@ -35,52 +47,28 @@ const dataProduct = [
         favourite: 'Yêu thích',
         hot_text: 'GIẢM',
         sold: 'Đã bán 4.3k',
-        View: [
-
-        ]
-    },
-    {
-        id: 2,
-        img: product_2,
-        price: '1.000.000 ₫',
-        sale: '500.000 ₫',
-        name: 'Điện thoại S21 Ultra Bán điện thoại di động mới 2022 (12GB / 512GB) Android 5g Trò chơi của Google COD',
-        hot: '50%',
-        star: [
-            <FontAwesomeIcon icon={faStar} />,
-            <FontAwesomeIcon icon={faStar} />,
-            <FontAwesomeIcon icon={faStar} />,
-            <FontAwesomeIcon icon={faStar} />,
-            <FontAwesomeIcon icon={faStar} />,
-        ],
-        favourite: 'Yêu thích',
-        hot_text: 'GIẢM',
-        sold: 'Đã bán 3k',
-        View: [
-
-        ]
-    },
-    {
-        id: 3,
-        img: product_3,
-        price: '1.000.000 ₫',
-        sale: '500.000 ₫',
-        name: 'Điên Thoại OPPO Reno 6Z 5G Mới Chính Hãng. Nguyên Seal Đầy Đủ Phụ Kiện Bảo Hành 12 tháng',
-        hot: '56%',
-        star: [
-            <FontAwesomeIcon icon={faStar} />,
-            <FontAwesomeIcon icon={faStar} />,
-            <FontAwesomeIcon icon={faStar} />,
-            <FontAwesomeIcon icon={faStar} />,
-            <FontAwesomeIcon icon={faStar} />,
-        ],
-        favourite: 'Yêu thích',
-        hot_text: 'GIẢM',
-        sold: 'Đã bán 6k',
         View: {
             data_s: {
-                price: '1.000.000 ₫',
-                sale: '500.000 ₫',
+                discount_code: [
+                    {
+                        voucher: 'Giảm ₫699k',
+                    },
+                    {
+                        voucher: 'Giảm ₫599k',
+                    },
+                    {
+                        voucher: 'Giảm ₫499k',
+                    },
+                    {
+                        voucher: 'Giảm ₫399k',
+                    },
+                ],
+                name: 'Điên Thoại OPPO Reno 6Z 5G Mới Chính Hãng. Nguyên Seal Đầy Đủ Phụ Kiện Bảo Hành 12 tháng',
+                favourite: '3k',
+                product_reviews: '3k',
+                price: '6.000.000 ₫',
+                sale: '3.000.000 ₫',
+                hot: '50%',
                 star: [
                     <FontAwesomeIcon icon={faStar} />,
                     <FontAwesomeIcon icon={faStar} />,
@@ -88,11 +76,17 @@ const dataProduct = [
                     <FontAwesomeIcon icon={faStar} />,
                     <FontAwesomeIcon icon={faStar} />,
                 ],
-                sold: 'Đã bán 6k',
+                sold: '6',
+                color: [
+                    'Đen',
+                    'Bạc'
+                ],
+                quantity_remaining: '3000',
+                // eslint-disable-next-line no-dupe-keys
+                product_reviews: 'Chưa Có Đánh Giá'
             },
             image_s: [
                 {
-                    name: 'Điên Thoại OPPO Reno 6Z 5G Mới Chính Hãng. Nguyên Seal Đầy Đủ Phụ Kiện Bảo Hành 12 tháng',
                     alt: 'Anh',
                     img: product_view_1,
 
@@ -121,6 +115,181 @@ const dataProduct = [
         }
     },
     {
+        id: 2,
+        img: product_2,
+        price: '1.000.000 ₫',
+        sale: '500.000 ₫',
+        name: 'Điện thoại S21 Ultra Bán điện thoại di động mới 2022 (12GB / 512GB) Android 5g Trò chơi của Google COD',
+        hot: '50%',
+        star: [
+            <FontAwesomeIcon icon={faStar} />,
+            <FontAwesomeIcon icon={faStar} />,
+            <FontAwesomeIcon icon={faStar} />,
+            <FontAwesomeIcon icon={faStar} />,
+            <FontAwesomeIcon icon={faStar} />,
+        ],
+        favourite: 'Yêu thích',
+        hot_text: 'GIẢM',
+        sold: 'Đã bán 3k',
+        View: {
+            data_s: {
+                discount_code: [
+                    {
+                        voucher: 'Giảm ₫699k',
+                    },
+                    {
+                        voucher: 'Giảm ₫599k',
+                    },
+                    {
+                        voucher: 'Giảm ₫499k',
+                    },
+                    {
+                        voucher: 'Giảm ₫399k',
+                    },
+                ],
+                name: 'Điên Thoại OPPO Reno 6Z 5G Mới Chính Hãng. Nguyên Seal Đầy Đủ Phụ Kiện Bảo Hành 12 tháng',
+                favourite: '3k',
+                product_reviews: '3k',
+                price: '6.000.000 ₫',
+                sale: '3.000.000 ₫',
+                hot: '50%',
+                star: [
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                ],
+                sold: '6',
+                color: [
+                    'Đen',
+                    'Bạc'
+                ],
+                quantity_remaining: '3000',
+                // eslint-disable-next-line no-dupe-keys
+                product_reviews: 'Chưa Có Đánh Giá'
+            },
+            image_s: [
+                {
+                    alt: 'Anh',
+                    img: product_view_1,
+
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_2
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_3
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_4
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_5
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_6
+                },
+            ]
+        }
+    },
+    {
+        id: 3,
+        img: product_3,
+        price: '6.000.000 ₫',
+        sale: '3.000.000 ₫',
+        name: 'Điên Thoại OPPO Reno 6Z 5G Mới Chính Hãng. Nguyên Seal Đầy Đủ Phụ Kiện Bảo Hành 12 tháng',
+        hot: '50%',
+        star: [
+            <FontAwesomeIcon icon={faStar} />,
+            <FontAwesomeIcon icon={faStar} />,
+            <FontAwesomeIcon icon={faStar} />,
+            <FontAwesomeIcon icon={faStar} />,
+            <FontAwesomeIcon icon={faStar} />,
+        ],
+        favourite: 'Yêu thích',
+        hot_text: 'GIẢM',
+        sold: 'Đã bán 6k',
+        View: {
+            data_s: {
+                discount_code: [
+                    {
+                        voucher: 'Giảm ₫699k',
+                    },
+                    {
+                        voucher: 'Giảm ₫599k',
+                    },
+                    {
+                        voucher: 'Giảm ₫499k',
+                    },
+                    {
+                        voucher: 'Giảm ₫399k',
+                    },
+                ],
+                name: 'Điên Thoại OPPO Reno 6Z 5G Mới Chính Hãng. Nguyên Seal Đầy Đủ Phụ Kiện Bảo Hành 12 tháng',
+                favourite: '3k',
+                product_reviews: '3k',
+                price: '6.000.000 ₫',
+                sale: '3.000.000 ₫',
+                hot: '50%',
+                star: [
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                ],
+                sold: '6',
+                color: [
+                    'Đen',
+                    'Bạc'
+                ],
+                quantity_remaining: '3000',
+                // eslint-disable-next-line no-dupe-keys
+                product_reviews: 'Chưa Có Đánh Giá'
+            },
+            image_s: [
+                {
+                    id: 1,
+                    alt: 'Anh',
+                    img: product_view_1,
+
+                },
+                {
+                    id: 2,
+                    alt: 'Anh',
+                    img: product_view_2
+                },
+                {
+                    id: 3,
+                    alt: 'Anh',
+                    img: product_view_3
+                },
+                {
+                    id: 4,
+                    alt: 'Anh',
+                    img: product_view_4
+                },
+                {
+                    id: 5,
+                    alt: 'Anh',
+                    img: product_view_5
+                },
+                {
+
+                    id: 6,
+                    alt: 'Anh',
+                    img: product_view_6
+                },
+            ]
+        }
+    },
+    {
         id: 4,
         img: product_4,
         price: '1.000.000 ₫',
@@ -137,9 +306,72 @@ const dataProduct = [
         favourite: null,
         hot_text: 'GIẢM',
         sold: 'Đã bán 1k',
-        View: [
+        View: {
+            data_s: {
+                discount_code: [
+                    {
+                        voucher: 'Giảm ₫699k',
+                    },
+                    {
+                        voucher: 'Giảm ₫599k',
+                    },
+                    {
+                        voucher: 'Giảm ₫499k',
+                    },
+                    {
+                        voucher: 'Giảm ₫399k',
+                    },
+                ],
+                name: 'Điên Thoại OPPO Reno 6Z 5G Mới Chính Hãng. Nguyên Seal Đầy Đủ Phụ Kiện Bảo Hành 12 tháng',
+                favourite: '3k',
+                product_reviews: '3k',
+                price: '6.000.000 ₫',
+                sale: '3.000.000 ₫',
+                hot: '50%',
+                star: [
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                ],
+                sold: '6',
+                color: [
+                    'Đen',
+                    'Bạc'
+                ],
+                quantity_remaining: '3000',
+                // eslint-disable-next-line no-dupe-keys
+                product_reviews: 'Chưa Có Đánh Giá'
+            },
+            image_s: [
+                {
+                    alt: 'Anh',
+                    img: product_view_1,
 
-        ]
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_2
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_3
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_4
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_5
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_6
+                },
+            ]
+        }
     },
     {
         id: 5,
@@ -158,17 +390,80 @@ const dataProduct = [
         favourite: 'Yêu thích',
         hot_text: 'GIẢM',
         sold: 'Đã bán 2k',
-        View: [
+        View: {
+            data_s: {
+                discount_code: [
+                    {
+                        voucher: 'Giảm ₫699k',
+                    },
+                    {
+                        voucher: 'Giảm ₫599k',
+                    },
+                    {
+                        voucher: 'Giảm ₫499k',
+                    },
+                    {
+                        voucher: 'Giảm ₫399k',
+                    },
+                ],
+                name: 'Điên Thoại OPPO Reno 6Z 5G Mới Chính Hãng. Nguyên Seal Đầy Đủ Phụ Kiện Bảo Hành 12 tháng',
+                favourite: '3k',
+                product_reviews: '3k',
+                price: '6.000.000 ₫',
+                sale: '3.000.000 ₫',
+                hot: '50%',
+                star: [
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                ],
+                sold: '6',
+                color: [
+                    'Đen',
+                    'Bạc'
+                ],
+                quantity_remaining: '3000',
+                // eslint-disable-next-line no-dupe-keys
+                product_reviews: 'Chưa Có Đánh Giá'
+            },
+            image_s: [
+                {
+                    alt: 'Anh',
+                    img: product_view_1,
 
-        ]
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_2
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_3
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_4
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_5
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_6
+                },
+            ]
+        }
     },
     {
         id: 6,
         img: product_6,
-        price: '1.000.000 ₫',
-        sale: '500.000 ₫',
+        price: '24.990.000 ₫',
+        sale: '13.690.000 ₫',
         name: 'Điện Thoại Samsung Galaxy Z Flip3 5G 128GB',
-        hot: '49%',
+        hot: '45%',
         star: [
             <FontAwesomeIcon icon={faStar} />,
             <FontAwesomeIcon icon={faStar} />,
@@ -178,10 +473,96 @@ const dataProduct = [
         ],
         favourite: 'Yêu thích',
         hot_text: 'GIẢM',
-        sold: 'Đã bán 5k',
-        View: [
+        sold: 'Đã bán 454',
+        View: {
+            data_s: {
+                discount_code: [
+                    {
+                        voucher: 'Giảm ₫699k',
+                    },
+                    {
+                        voucher: 'Giảm ₫599k',
+                    },
+                    {
+                        voucher: 'Giảm ₫499k',
+                    },
+                    {
+                        voucher: 'Giảm ₫399k',
+                    },
+                ],
+                name: 'Điện Thoại Samsung Galaxy Z Flip3 5G 128GB',
+                favourite: '3k',
+                product_reviews: '3k',
+                price: '24.990.000 ₫',
+                sale: '13.690.000 ₫',
+                hot: '45%',
+                star: [
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                ],
+                sold: '6',
+                color: [
+                    'Đen',
+                    'Cream',
+                    'Green',
+                    'Lavender'
+                ],
+                quantity_remaining: '3000',
+                // eslint-disable-next-line no-dupe-keys
+                product_reviews: 'Chưa Có Đánh Giá'
+            },
+            image_s: [
+                {
+                    id: 1,
+                    alt: 'Anh',
+                    img: product_view_7,
 
-        ]
+                },
+                {
+                    id: 2,
+                    alt: 'Anh',
+                    img: product_view_8
+                },
+                {
+                    id: 3,
+                    alt: 'Anh',
+                    img: product_view_9
+                },
+                {
+                    id: 4,
+                    alt: 'Anh',
+                    img: product_view_10
+                },
+                {
+                    id: 5,
+                    alt: 'Anh',
+                    img: product_view_11
+                },
+                {
+                    id: 6,
+                    alt: 'Anh',
+                    img: product_view_12
+                },
+                {
+                    id: 7,
+                    alt: 'Anh',
+                    img: product_view_13
+                },
+                {
+                    id: 8,
+                    alt: 'Anh',
+                    img: product_view_14
+                },
+                {
+                    id: 9,
+                    alt: 'Anh',
+                    img: product_view_15
+                },
+            ]
+        }
     },
     {
         id: 7,
@@ -200,9 +581,72 @@ const dataProduct = [
         favourite: 'Yêu thích',
         hot_text: 'GIẢM',
         sold: 'Đã bán 2.1k',
-        View: [
+        View: {
+            data_s: {
+                discount_code: [
+                    {
+                        voucher: 'Giảm ₫699k',
+                    },
+                    {
+                        voucher: 'Giảm ₫599k',
+                    },
+                    {
+                        voucher: 'Giảm ₫499k',
+                    },
+                    {
+                        voucher: 'Giảm ₫399k',
+                    },
+                ],
+                name: 'Điên Thoại OPPO Reno 6Z 5G Mới Chính Hãng. Nguyên Seal Đầy Đủ Phụ Kiện Bảo Hành 12 tháng',
+                favourite: '3k',
+                product_reviews: '3k',
+                price: '6.000.000 ₫',
+                sale: '3.000.000 ₫',
+                hot: '50%',
+                star: [
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                ],
+                sold: '6',
+                color: [
+                    'Đen',
+                    'Bạc'
+                ],
+                quantity_remaining: '3000',
+                // eslint-disable-next-line no-dupe-keys
+                product_reviews: 'Chưa Có Đánh Giá'
+            },
+            image_s: [
+                {
+                    alt: 'Anh',
+                    img: product_view_1,
 
-        ]
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_2
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_3
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_4
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_5
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_6
+                },
+            ]
+        }
     },
     {
         id: 8,
@@ -221,9 +665,72 @@ const dataProduct = [
         favourite: 'Yêu thích',
         hot_text: 'GIẢM',
         sold: 'Đã bán 2.1k',
-        View: [
+        View: {
+            data_s: {
+                discount_code: [
+                    {
+                        voucher: 'Giảm ₫699k',
+                    },
+                    {
+                        voucher: 'Giảm ₫599k',
+                    },
+                    {
+                        voucher: 'Giảm ₫499k',
+                    },
+                    {
+                        voucher: 'Giảm ₫399k',
+                    },
+                ],
+                name: 'Điên Thoại OPPO Reno 6Z 5G Mới Chính Hãng. Nguyên Seal Đầy Đủ Phụ Kiện Bảo Hành 12 tháng',
+                favourite: '3k',
+                product_reviews: '3k',
+                price: '6.000.000 ₫',
+                sale: '3.000.000 ₫',
+                hot: '50%',
+                star: [
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                    <FontAwesomeIcon icon={faStar} />,
+                ],
+                sold: '6',
+                color: [
+                    'Đen',
+                    'Bạc'
+                ],
+                quantity_remaining: '3000',
+                // eslint-disable-next-line no-dupe-keys
+                product_reviews: 'Chưa Có Đánh Giá'
+            },
+            image_s: [
+                {
+                    alt: 'Anh',
+                    img: product_view_1,
 
-        ]
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_2
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_3
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_4
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_5
+                },
+                {
+                    alt: 'Anh',
+                    img: product_view_6
+                },
+            ]
+        }
     },
 ]
 

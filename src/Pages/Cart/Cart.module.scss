@@ -1,0 +1,53 @@
+.wrapper {
+    min-height: 63.6vh;
+    margin-top: 9.6rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .null {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title-null {
+            color: rgba(0,0,0,.4);
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    
+        .btn {
+            display: inline-block;
+            width: 15rem;
+            text-align: center;
+            padding: 1rem;
+            background-color: #ee0033;
+            color: #FFF;
+        }
+
+    }
+
+    
+}
+
+.wrapper-product {
+    margin-top: 9.6rem;
+    min-height: 63.6vh;
+    display: flex;
+    justify-content: center;
+
+    .order {
+        width: 86%;
+        background-color: #FFF;
+        padding: 8rem;
+
+        .list-order {
+            display: flex;
+
+            
+        }
+    }
+}

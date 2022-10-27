@@ -7,10 +7,10 @@ import ProductView from "@/Pages/ProductView"
 
 const publicRoutes = [
     { path: '/', component: Home },
-    { path: 'cart', component: Cart },
-    { path: 'login', component: Login, layout: null },
-    { path: 'register', component: Register, layout: null },
-    { path: 'cart', component: Cart },
+    { path: '/cart', component: Cart },
+    { path: '/login', component: Login, layout: null },
+    { path: '/register', component: Register, layout: null },
+    { path: '/cart', component: Cart },
     { path: '*', component: NotFound, layout: null },
     { path: '/products/product-:productId', component: ProductView }
 ]

@@ -38,7 +38,7 @@ function Header() {
                                 Siêu thị gần nhất
                             </a>
                         </div>
-                        <Link to="cart" className={cl('header-text')}>
+                        <Link to="/cart" className={cl('header-text')}>
                             <img
                                 className={cl('icon-cart')}
                                 src={iconData_2.img}
