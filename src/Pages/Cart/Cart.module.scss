@@ -34,6 +34,7 @@
 }
 
 .wrapper-product {
+    user-select: none;
     margin-top: 9.6rem;
     min-height: 63.6vh;
     display: flex;
@@ -41,13 +42,140 @@
 
     .order {
         width: 86%;
-        background-color: #FFF;
-        padding: 8rem;
 
         .list-order {
+            border-top: 1px solid rgba(0,0,0,.09);
+            border-bottom: 1px solid rgba(0,0,0,.09);
+            padding: 1rem 0;
             display: flex;
+            align-items: center;
+            margin: 5rem 8rem;
+            background-color: #fff;
 
-            
+            .order-choose {
+                padding: 0 2rem;
+
+                label {
+                    position: relative;
+                    display: inline-block;
+                    width: 2rem;
+                    height: 2rem;
+                    border: 1px solid rgba(0,0,0,.14);
+
+                    svg {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #FFF;
+                    }
+                }
+
+                input {
+                    display: none;
+                }
+
+                input {
+                    &:checked + label {
+                        background-color: #ee0033;
+                    }
+                }
+            }
+
+            .order-product {
+                width: 10rem;
+                height: 10rem;
+
+                img {
+                    user-select: none;
+                    width: -webkit-fill-available;
+                }
+            }
+
+            .product-name {
+                user-select: none;
+                padding-left: 3.5rem;
+                padding-right: 1rem;
+                width: 40rem;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            .order-classify {
+                user-select: none;
+                cursor: pointer;
+                font-size: 1.8rem;
+                padding: 0 1rem;
+                color: rgba(0,0,0,.54);
+                height: 100%;
+                width: 21rem;
+
+                &:hover {
+                    color: #ee4d2d;
+                }
+
+                .classify {
+                    display: inline-block;
+                }
+
+                .colors {
+                    padding-left: 1rem;
+                }
+            }
+
+            .price-order {
+                font-size: 1.8rem;
+                margin: 0 3rem;
+
+                .price {
+                    font-size: 1.6rem;
+                    color: rgba(0,0,0,.54);
+                    text-decoration: line-through;
+                    padding-right: 1.5rem;
+                }
+            }
+
+            .order-quantity {
+                display: flex;
+                align-items: center;
+                
+                input {
+                    width: 6rem;
+                    font-size: 1.6rem;
+                    border: 2px solid rgba(0,0,0,.09);
+                    padding: 1rem 0;
+                    text-align: center;
+
+                    &:focus {
+                        border-color: #ee4d2d;
+                    }
+                }
+
+                svg {
+                    width: 4rem;
+                    padding: 1rem 0;
+                    border: 1px solid rgba(0,0,0,.09);
+                    cursor: pointer;
+                }
+            }
+
+            .total {
+                color: #ee4d2d;
+                padding: 0 3.5rem;
+                font-weight: bold;
+            }
+
+            .delete-order {
+                font-size: 1.8rem;
+                cursor: pointer;
+                padding-left: 2rem;
+
+                &:hover {
+                    color: red;
+                }
+            }
         }
     }
 }

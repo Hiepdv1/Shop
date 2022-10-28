@@ -48,6 +48,8 @@ const dataProduct = [
         hot_text: 'GIẢM',
         sold: 'Đã bán 4.3k',
         View: {
+            priceInt: 13690000,
+            product_id: 1,
             data_s: {
                 discount_code: [
                     {
@@ -132,6 +134,8 @@ const dataProduct = [
         hot_text: 'GIẢM',
         sold: 'Đã bán 3k',
         View: {
+            priceInt: 13690000,
+            product_id: 2,
             data_s: {
                 discount_code: [
                     {
@@ -216,6 +220,8 @@ const dataProduct = [
         hot_text: 'GIẢM',
         sold: 'Đã bán 6k',
         View: {
+            priceInt: 13690000,
+            product_id: 3,
             data_s: {
                 discount_code: [
                     {
@@ -307,6 +313,8 @@ const dataProduct = [
         hot_text: 'GIẢM',
         sold: 'Đã bán 1k',
         View: {
+            priceInt: 13690000,
+            product_id: 4,
             data_s: {
                 discount_code: [
                     {
@@ -391,6 +399,8 @@ const dataProduct = [
         hot_text: 'GIẢM',
         sold: 'Đã bán 2k',
         View: {
+            priceInt: 13690000,
+            product_id: 5,
             data_s: {
                 discount_code: [
                     {
@@ -475,6 +485,8 @@ const dataProduct = [
         hot_text: 'GIẢM',
         sold: 'Đã bán 454',
         View: {
+            priceInt: 13690000,
+            product_id: 6,
             data_s: {
                 discount_code: [
                     {
@@ -582,6 +594,8 @@ const dataProduct = [
         hot_text: 'GIẢM',
         sold: 'Đã bán 2.1k',
         View: {
+            priceInt: 500000,
+            product_id: 7,
             data_s: {
                 discount_code: [
                     {
@@ -666,6 +680,8 @@ const dataProduct = [
         hot_text: 'GIẢM',
         sold: 'Đã bán 2.1k',
         View: {
+            priceInt: 500000,
+            product_id: 8,
             data_s: {
                 discount_code: [
                     {

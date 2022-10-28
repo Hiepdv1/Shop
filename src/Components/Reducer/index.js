@@ -1,4 +1,4 @@
-import { getItem, setItem } from "../localStorage"
+import { getItem, removeItem, setItem } from "../localStorage"
 
 const initialState = getItem() || []
 
@@ -9,6 +9,8 @@ const Reducer = (state = initialState, action) => {
         case 'ADD_CART':
             setItem(action.payload)
             return
+        case 'DELETE_ORDER':
+            return removeItem(action.payload)
         default:
             return state
     }

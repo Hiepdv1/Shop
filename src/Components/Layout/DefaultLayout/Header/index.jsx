@@ -10,6 +10,7 @@ import Search from '../components/Search';
 import { iconData_2 } from '@/assets/fake-data/icon';
 import Navigation from '../components/Navigation';
 import DataMenuItem from '../components/DataMenuItem';
+import { getItem } from '@/Components/localStorage';
 
 const cl = classNames.bind(styles);
 
@@ -17,6 +18,8 @@ function Header() {
     const classHd = cl('header-account__item', {
         'straight-line': true,
     });
+
+    const quantity = getItem().length;
 
     return (
         <header className={cl('header')}>
@@ -44,7 +47,9 @@ function Header() {
                                 src={iconData_2.img}
                                 alt={iconData_2.alt}
                             />
-                            <span className={cl('header-cart__text')}>Giỏ hàng(0)</span>
+                            <span
+                                className={cl('header-cart__text')}
+                            >{`Giỏ hàng(${quantity})`}</span>
                         </Link>
                     </div>
                     <div className={cl('header-account')}>

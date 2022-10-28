@@ -8,14 +8,39 @@ const getItem = () => {
 
 const setItem = (item) => {
     const arr = getItem("Data_Order")
-    arr.push(item)
+
+    const index = arr.find((crr) => crr.id === item.id)
+
+
+    if (index) {
+        arr.forEach((crr) => {
+            if (crr.id === item.id) {
+                crr.quantity = crr.quantity + item.quantity
+                crr.priceInt = crr.priceInt * crr.quantity
+            }
+        })
+    } else {
+        arr.push(item)
+    }
 
     const jsonData = JSON.stringify(arr)
     return localStorage.setItem('Data_Order', jsonData)
 }
 
 const removeItem = (item) => {
-    return localStorage.clear()
+    const arr = getItem()
+
+    arr.forEach((i, index) => {
+        if (i.id === item) {
+            arr.splice(index, 1)
+        }
+    })
+
+    const jsonData = JSON.stringify(arr)
+
+    localStorage.setItem('Data_Order', jsonData)
+
+    return arr
 }
 
 export {
