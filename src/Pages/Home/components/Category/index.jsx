@@ -11,11 +11,7 @@ function Category({ data }) {
             <div className={cl('featured')}>
                 {data.map((item, index) => {
                     return (
-                        <Link
-                            to={`/infomation-${item.id}`}
-                            key={index}
-                            className={cl('featured-item')}
-                        >
+                        <Link to={item.url} key={index} className={cl('featured-item')}>
                             <img
                                 className={cl('featured-item__img')}
                                 src={item.img}

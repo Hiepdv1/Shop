@@ -16,9 +16,13 @@ const setItem = (item) => {
         arr.forEach((crr) => {
             if (crr.id === item.id) {
                 crr.quantity = crr.quantity + item.quantity
-                crr.priceInt = crr.priceInt * crr.quantity
+                crr.total = crr.priceInt * crr.quantity
+                console.log(crr.quantity, crr.priceInt);
             }
         })
+    } else if (arr.length === 0) {
+        item.total = item.priceInt * item.quantity
+        arr.push(item)
     } else {
         arr.push(item)
     }

@@ -19,7 +19,6 @@ function Cart() {
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'VND',
-        minimumFractionDigits: 3,
     });
 
     const handleDeleteOrder = (id) => {
@@ -62,7 +61,7 @@ function Cart() {
                                         Số lượng: {item.quantity}
                                     </div>
                                     <div className={cl('total')}>
-                                        {formatter.format(item.priceInt)}
+                                        {formatter.format(item.total)}
                                     </div>
                                     <div
                                         onClick={() => handleDeleteOrder(item.id)}

@@ -17,6 +17,7 @@ import { useReducer } from 'react';
 import { initialState, Reducer } from '@/Components/Reducer';
 import { addCart } from '@/Components/Actions';
 import Header from '@/Components/Layout/DefaultLayout/Header';
+import { dataPagesPhone } from '@/assets/fake-data/productPagePhone';
 
 const cl = classNames.bind(styles);
 
@@ -24,7 +25,11 @@ function ProductView() {
     const [state, dispatch] = useReducer(Reducer, initialState);
 
     const { productId } = useParams();
-    const { View } = dataProduct.find((items) => items.id.toString() === productId);
+
+    console.log(productId);
+    const { View } =
+        dataProduct.find((items) => items.id.toString() === productId) ||
+        dataPagesPhone.find((items) => items.id.toString() === productId);
     const { data_s, image_s } = View;
     const [activeImage, setActiveImage] = useState(image_s[0]);
     const [quantity, setQuantity] = useState(1);
@@ -46,6 +51,7 @@ function ProductView() {
             priceInt: View.priceInt,
             activeImage,
             quantity,
+            total: 0,
         };
         dispatch(addCart(value));
     };
@@ -119,9 +125,9 @@ function ProductView() {
                             </div>
                         </div>
                         <div className={cl('color')}>
-                            <span className={cl('title')}>Màu Sắc</span>
+                            {data_s.color && <span className={cl('title')}>Màu Sắc</span>}
                             <div className={cl('list-color')}>
-                                {data_s.color.map((item, index) => {
+                                {data_s.color?.map((item, index) => {
                                     return (
                                         <div className={cl('phone-color')} key={index}>
                                             {item}
