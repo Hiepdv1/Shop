@@ -40,6 +40,7 @@
             padding: 1rem 2rem;
 
             .orders-title {
+                padding: 0 2rem;
                 font-size: 2.5rem;
                 font-weight: 500;
                 line-height: 1.2;
@@ -48,6 +49,7 @@
 
             .product-reviews {
                 margin: 1rem 0;
+                padding: 0 2rem;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -83,6 +85,7 @@
             }
 
             .orders-price {
+                padding: 0 2rem;
                 width: 100%;
                 padding: 1.5rem 2rem;
                 background-color: #f5f5f5;
@@ -118,6 +121,7 @@
             }
 
             .discount-code {
+                padding: 0 2rem;
                 display: grid;
                 grid-template-columns: 20% 80%;
                 
@@ -171,6 +175,7 @@
             }
 
             .transport {
+                padding: 0 2rem;
                 margin-top: 2.5rem;
                 display: grid;
                 grid-template-columns: 19% 80%;
@@ -221,19 +226,33 @@
                 }                
             }
 
+            .active.group {
+                background-color: #fff5f5;
+                padding: 1rem 0;
+            }
+
+            
+
             .color {
                 margin-top: 2.5rem;
-                display: grid;
-                grid-template-columns: 19% 80%;
+                display: flex;
+                padding: 0 2rem;
 
                 .title {
                     display: flex;
                     align-items: center;
                     color: #757575;
+                    width: 19%;
                 }
 
                 .list-color {
                     display: flex;
+                    flex-direction: column;
+                    user-select: none;
+
+                    .fl {
+                        display: flex;
+                    }
 
                     .phone-color {
                         border: 1px solid rgba(0,0,0,.09);
@@ -281,7 +300,77 @@
                 }
             }
 
+
+
+            .capacity {
+                margin-top: 2.5rem;
+                display: flex;
+                padding: 0 2rem;
+                user-select: none;
+
+                .capacity-title {
+                    display: flex;
+                    align-items: center;
+                    color: #757575;
+                    width: 19%;
+                }
+
+                .list-capacity {
+                    display: flex;
+                    user-select: none;
+
+                    .capacity-item {
+                        border: 1px solid rgba(0,0,0,.09);
+                        padding: 8px 1rem;
+                        text-align: center;
+                        cursor: pointer;
+                        position: relative;
+                        overflow: hidden;
+
+                        &:hover {
+                            color: #ee4d2d;
+                            border-color: #ee4d2d;
+                        }
+
+                        .icon-check {
+                            position: absolute;
+                            bottom: 0;
+                            font-size: 1.2rem;
+                            right: 0;
+                            color: #FFF;
+                            display: none;
+                        }
+                    }
+
+                    .active.capacity-item {
+                        color: #ee4d2d;
+                        border-color: #ee4d2d;
+                        .icon-check {
+                            display: block;
+                        }
+                        &::before {
+                            border: 2rem solid transparent;
+                            border-bottom: 2rem solid var(--brand-primary-color,#ee4d2d);
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            right: -2rem;
+                        }
+                    }
+
+                    .capacity-item + .capacity-item {
+                        margin-left: 1.5rem;
+                    }
+                }
+            }
+
+            .notification {
+                color: #d0011b;
+                margin: 3rem 0 0 20%;
+            }
+
             .quantity {
+                padding: 0 2rem;
                 margin-top: 2rem;
                 display: grid;
                 grid-template-columns: 19% 81%;
@@ -318,6 +407,7 @@
             }
 
             .buy {
+                padding: 0 2rem;
                 margin-top: 3rem;
                 display: flex;
                 align-items: center;
@@ -351,5 +441,56 @@
                 }
             }
         }
+    }
+}
+
+.toast-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+
+    .message {
+        width: 500px;
+        height: 250px;
+        z-index: 1;
+        background-color: rgb(0, 0, 0, .7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        animation: fadeOut linear 1s 3s forwards;
+
+        .toast-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #00BFA5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+
+            svg {
+                font-size: 3rem;
+            }
+        }
+
+        .toast-text {
+            margin-top: 1.8rem;
+            color: #FFF;
+            font-size: 2rem;
+        }
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
     }
 }

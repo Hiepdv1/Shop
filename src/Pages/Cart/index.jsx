@@ -51,7 +51,7 @@ function Cart() {
                                         <span className={cl('classify')}>
                                             Phân loại hàng:
                                         </span>
-                                        <span className={cl('colors')}>Do</span>
+                                        <span className={cl('colors')}>{item.type}</span>
                                     </div>
                                     <div className={cl('price-order')}>
                                         <span className={cl('price')}>{item.price}</span>
@@ -61,7 +61,7 @@ function Cart() {
                                         Số lượng: {item.quantity}
                                     </div>
                                     <div className={cl('total')}>
-                                        {formatter.format(item.total)}
+                                        {formatter.format(item.priceInt * item.quantity)}
                                     </div>
                                     <div
                                         onClick={() => handleDeleteOrder(item.id)}

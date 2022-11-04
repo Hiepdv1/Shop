@@ -11,18 +11,22 @@ const setItem = (item) => {
 
     const index = arr.find((crr) => crr.id === item.id)
 
-
     if (index) {
-        arr.forEach((crr) => {
-            if (crr.id === item.id) {
-                crr.quantity = crr.quantity + item.quantity
-                crr.total = crr.priceInt * crr.quantity
-                console.log(crr.quantity, crr.priceInt);
+        const find = arr.find((crr) => crr.id === item.id && crr.activeImage.id_img === item.activeImage.id_img)
+        const findType = arr.find((crr) => crr.id_type === item.id_type)
+        if (item.id_type) {
+            if (findType) {
+                findType.quantity = findType.quantity + item.quantity
+            } else {
+                arr.push(item)
             }
-        })
-    } else if (arr.length === 0) {
-        item.total = item.priceInt * item.quantity
-        arr.push(item)
+        } else {
+            if (find) {
+                find.quantity = find.quantity + item.quantity
+            } else {
+                arr.push(item)
+            }
+        }
     } else {
         arr.push(item)
     }

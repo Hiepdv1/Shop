@@ -2,7 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './ProductView.module.scss';
 import { dataProduct } from '@/assets/fake-data/Product';
 import { useParams } from 'react-router-dom';
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCartPlus,
@@ -24,15 +24,28 @@ const cl = classNames.bind(styles);
 function ProductView() {
     const [state, dispatch] = useReducer(Reducer, initialState);
 
-    const { productId } = useParams();
+    const isChoose = {
+        choose: false,
+        index: null,
+    };
 
-    console.log(productId);
+    const isCapacity = {
+        choose: false,
+        index: null,
+    };
+
+    const { productId } = useParams();
     const { View } =
         dataProduct.find((items) => items.id.toString() === productId) ||
         dataPagesPhone.find((items) => items.id.toString() === productId);
     const { data_s, image_s } = View;
     const [activeImage, setActiveImage] = useState(image_s[0]);
     const [quantity, setQuantity] = useState(1);
+    const [activeColor, setActiveColor] = useState(isChoose);
+    const [chooseColor, setChooseColor] = useState();
+    const [checkSubmit, setCheckSubmit] = useState(false);
+    const [showToast, setShowToast] = useState(false);
+    const [capacity, setCapacity] = useState(isCapacity);
 
     const handleActiveImg = useCallback(
         (item) => {
@@ -49,15 +62,62 @@ function ProductView() {
             price: data_s.price,
             sale: data_s.sale,
             priceInt: View.priceInt,
-            activeImage,
+            activeImage: chooseColor || activeImage,
             quantity,
-            total: 0,
+            type: activeColor.color,
         };
-        dispatch(addCart(value));
+        if (data_s.Capacity) {
+            if (capacity.choose) {
+                dispatch(
+                    addCart({
+                        ...value,
+                        sale: capacity.capacity.price,
+                        priceInt: capacity.capacity.priceInt,
+                        type: capacity.capacity.title,
+                        id_type: capacity.capacity.id,
+                    }),
+                );
+                setShowToast(true);
+                setTimeout(() => {
+                    setShowToast(false);
+                }, 4000);
+                return;
+            } else {
+                return setCheckSubmit(capacity.choose ? false : true);
+            }
+        }
+        if (data_s.color) {
+            if (activeColor.choose) {
+                dispatch(addCart(value));
+                setShowToast(true);
+                setTimeout(() => {
+                    setShowToast(false);
+                }, 4000);
+            } else {
+                setCheckSubmit(activeColor.choose ? false : true);
+            }
+        } else {
+            dispatch(addCart(value));
+        }
     };
 
     return (
         <>
+            {showToast && (
+                <div
+                    onClick={() => {
+                        setShowToast(false);
+                    }}
+                    className={cl('toast-message')}
+                >
+                    <div className={cl('message')}>
+                        <div className={cl('toast-icon')}>
+                            <FontAwesomeIcon icon={faCheck} />
+                        </div>
+                        <div className={cl('toast-text')}>Đặt hàng thành công</div>
+                    </div>
+                </div>
+            )}
             <Header />
             <div className={cl('wrapper')}>
                 <div className={cl('product-briefing')}>
@@ -65,10 +125,13 @@ function ProductView() {
                         <div className={cl('product-img')}>
                             <div
                                 style={{
-                                    backgroundImage: `url(${activeImage.img})`,
+                                    backgroundImage: `url(${
+                                        chooseColor ? chooseColor.img : activeImage.img
+                                    })`,
                                 }}
                             ></div>
                         </div>
+
                         <div className={cl('list-img')}>
                             <ListView
                                 data={image_s}
@@ -91,7 +154,9 @@ function ProductView() {
                         </div>
                         <div className={cl('orders-price')}>
                             <span className={cl('price')}>{data_s.price}</span>
-                            <span className={cl('sale')}>{data_s.sale}</span>
+                            <span className={cl('sale')}>
+                                {capacity.choose ? capacity.capacity.price : data_s.sale}
+                            </span>
                             <span className={cl('title')}>GIẢM {data_s.hot}</span>
                         </div>
                         <div className={cl('discount-code')}>
@@ -124,21 +189,125 @@ function ProductView() {
                                 </div>
                             </div>
                         </div>
-                        <div className={cl('color')}>
-                            {data_s.color && <span className={cl('title')}>Màu Sắc</span>}
-                            <div className={cl('list-color')}>
-                                {data_s.color?.map((item, index) => {
-                                    return (
-                                        <div className={cl('phone-color')} key={index}>
-                                            {item}
-                                            <FontAwesomeIcon
-                                                className={cl('icon-check')}
-                                                icon={faCheck}
-                                            />
+
+                        <div
+                            className={cl('group', {
+                                active: checkSubmit,
+                            })}
+                        >
+                            {data_s.color && (
+                                <div className={cl('color')}>
+                                    <span className={cl('title')}>Màu Sắc</span>
+                                    <div className={cl('list-color')}>
+                                        <div
+                                            className={cl('fl', {
+                                                active: activeColor.choose,
+                                            })}
+                                        >
+                                            {data_s.color?.map((item, index) => {
+                                                return (
+                                                    <span
+                                                        onMouseOver={() =>
+                                                            setChooseColor(item)
+                                                        }
+                                                        onMouseOut={() => {
+                                                            if (activeColor.choose) {
+                                                                return setChooseColor(
+                                                                    activeColor,
+                                                                );
+                                                            }
+                                                            setChooseColor();
+                                                        }}
+                                                        onClick={() => {
+                                                            setActiveColor((prev) => {
+                                                                return {
+                                                                    ...prev,
+                                                                    index:
+                                                                        prev.index ===
+                                                                        index
+                                                                            ? null
+                                                                            : index,
+                                                                    choose:
+                                                                        prev.index ===
+                                                                        index
+                                                                            ? false
+                                                                            : true,
+                                                                    img: item.img,
+                                                                    id_img: item.id,
+                                                                    color: item.title,
+                                                                };
+                                                            });
+
+                                                            if (!data_s.Capacity) {
+                                                                setCheckSubmit(false);
+                                                            }
+                                                        }}
+                                                        className={cl('phone-color', {
+                                                            active:
+                                                                activeColor.index ===
+                                                                index,
+                                                        })}
+                                                        key={index}
+                                                    >
+                                                        {item.title}
+                                                        <FontAwesomeIcon
+                                                            className={cl('icon-check')}
+                                                            icon={faCheck}
+                                                        />
+                                                    </span>
+                                                );
+                                            })}
                                         </div>
-                                    );
-                                })}
-                            </div>
+                                    </div>
+                                </div>
+                            )}
+                            {data_s.Capacity && (
+                                <div className={cl('capacity')}>
+                                    <div className={cl('capacity-title')}>Capacity</div>
+                                    <div className={cl('list-capacity')}>
+                                        {data_s.Capacity?.map((item, index) => {
+                                            return (
+                                                <div
+                                                    onClick={() => {
+                                                        setCapacity((prev) => {
+                                                            return {
+                                                                ...prev,
+                                                                capacity: { ...item },
+                                                                index:
+                                                                    prev.index === index
+                                                                        ? null
+                                                                        : index,
+                                                                choose:
+                                                                    prev.index === index
+                                                                        ? false
+                                                                        : true,
+                                                            };
+                                                        });
+                                                        if (!data_s.color) {
+                                                            setCheckSubmit(false);
+                                                        }
+                                                    }}
+                                                    key={index}
+                                                    className={cl('capacity-item', {
+                                                        active: capacity.index === index,
+                                                    })}
+                                                >
+                                                    {item.title}
+                                                    <FontAwesomeIcon
+                                                        className={cl('icon-check')}
+                                                        icon={faCheck}
+                                                    />
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            )}
+                            {checkSubmit && (
+                                <div className={cl('notification')}>
+                                    Vui lòng chọn Phân loại hàng
+                                </div>
+                            )}
                         </div>
                         <div className={cl('quantity')}>
                             <span className={cl('title')}>Số Lượng</span>

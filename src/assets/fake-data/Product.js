@@ -8,7 +8,37 @@ const product_4 = require('../images/ProductsHome/product4.jpeg')
 const product_5 = require('../images/ProductsHome/product5.jpeg')
 const product_6 = require('../images/ProductsHome/product6.jpeg')
 const product_7 = require('../images/ProductsHome/product7.jpeg')
-const product_8 = require('../images/ProductsHome/product8.jpeg')
+
+const activeImg_1 = require('../images/ProductsView/Product_1/atImg/Product_1/bn1.jpeg')
+const activeImg_2 = require('../images/ProductsView/Product_1/atImg/Product_1/bn2.jpeg')
+const activeImg_3 = require('../images/ProductsView/Product_1/atImg/Product_1/bn3.jpeg')
+
+const activeImg_2_1 = require('../images/ProductsView/Product_1/atImg/Product_2/bn1.jpeg')
+const activeImg_2_2 = require('../images/ProductsView/Product_1/atImg/Product_2/bn2.jpeg')
+const activeImg_2_3 = require('../images/ProductsView/Product_1/atImg/Product_2/bn3.jpeg')
+
+const activeImg_3_1 = require('../images/ProductsView/Product_1/atImg/Product_3/bn1.jpeg')
+const activeImg_3_2 = require('../images/ProductsView/Product_1/atImg/Product_3/bn2.jpeg')
+
+const activeImg_4_1 = require('../images/ProductsView/Product_1/atImg/Product_4/bn1.jpeg')
+const activeImg_4_2 = require('../images/ProductsView/Product_1/atImg/Product_4/bn2.jpeg')
+const activeImg_4_3 = require('../images/ProductsView/Product_1/atImg/Product_4/bn3.jpeg')
+
+const activeImg_5_1 = require('../images/ProductsView/Product_1/atImg/Product_5/bn1.jpeg')
+const activeImg_5_2 = require('../images/ProductsView/Product_1/atImg/Product_5/bn2.jpeg')
+const activeImg_5_3 = require('../images/ProductsView/Product_1/atImg/Product_5/bn3.jpeg')
+
+const activeImg_6_1 = require('../images/ProductsView/Product_1/atImg/Product_6/bn1.jpeg')
+const activeImg_6_2 = require('../images/ProductsView/Product_1/atImg/Product_6/bn2.jpeg')
+
+const activeImg_7_1 = require('../images/ProductsView/Product_1/atImg/Product_7/bn1.jpeg')
+const activeImg_7_2 = require('../images/ProductsView/Product_1/atImg/Product_7/bn2.jpeg')
+const activeImg_7_3 = require('../images/ProductsView/Product_1/atImg/Product_7/bn3.jpeg')
+
+const activeImg_8_1 = require('../images/ProductsView/Product_1/atImg/Product_8/bn1.jpeg')
+const activeImg_8_2 = require('../images/ProductsView/Product_1/atImg/Product_8/bn2.jpeg')
+const activeImg_8_3 = require('../images/ProductsView/Product_1/atImg/Product_8/bn3.jpeg')
+
 
 const product_view_1 = require('../images/ProductsView/Product_1/bn.jpeg')
 const product_view_2 = require('../images/ProductsView/Product_1/bn2.jpeg')
@@ -19,6 +49,7 @@ const product_view_6 = require('../images/ProductsView/Product_1/bn6.jpeg')
 const product_view_6_1 = require('../images/ProductsView/Product_1/bn7.jpeg')
 const product_view_6_2 = require('../images/ProductsView/Product_1/bn8.jpeg')
 const product_view_6_3 = require('../images/ProductsView/Product_1/bn9.jpeg')
+
 
 const product_view_2_1 = require('../images/ProductsView/Product_2/bn1.jpeg')
 const product_view_2_2 = require('../images/ProductsView/Product_2/bn2.jpeg')
@@ -136,10 +167,23 @@ const dataProduct = [
                 ],
                 sold: '50',
                 color: [
-                    'Orange',
-                    'Purple',
-                    'Black-Blue'
+                    {
+                        id: 1,
+                        title: 'Orange',
+                        img: activeImg_1,
+                    },
+                    {
+                        id: 2,
+                        title: 'Purple',
+                        img: activeImg_2,
+                    },
+                    {
+                        id: 3,
+                        title: 'Black-Blue',
+                        img: activeImg_3,
+                    }
                 ],
+                Capacity: null,
                 quantity_remaining: '3000',
                 // eslint-disable-next-line no-dupe-keys
                 product_reviews: '32 Đánh Giá'
@@ -244,10 +288,23 @@ const dataProduct = [
                 ],
                 sold: '48',
                 color: [
-                    'Black',
-                    'Green',
-                    'Gold'
+                    {
+                        id: 1,
+                        title: 'Black',
+                        img: activeImg_2_1,
+                    },
+                    {
+                        id: 2,
+                        title: 'Green',
+                        img: activeImg_2_2,
+                    },
+                    {
+                        id: 3,
+                        title: 'Gold',
+                        img: activeImg_2_3,
+                    }
                 ],
+                Capacity: null,
                 quantity_remaining: '3000',
                 // eslint-disable-next-line no-dupe-keys
                 product_reviews: '31 Đánh Giá'
@@ -347,9 +404,18 @@ const dataProduct = [
                 ],
                 sold: '0',
                 color: [
-                    'Đen',
-                    'Xanh Bạc'
+                    {
+                        id: 1,
+                        title: 'Đen',
+                        img: activeImg_3_1,
+                    },
+                    {
+                        id: 2,
+                        title: 'Xanh Bạc',
+                        img: activeImg_3_2,
+                    },
                 ],
+                Capacity: null,
                 quantity_remaining: '3000',
                 // eslint-disable-next-line no-dupe-keys
                 product_reviews: 'Chưa Có Đánh Giá'
@@ -452,9 +518,23 @@ const dataProduct = [
                 ],
                 sold: '10',
                 color: [
-                    'Đen',
-                    'Bạc'
+                    {
+                        id: 1,
+                        title: 'Black',
+                        img: activeImg_4_3,
+                    },
+                    {
+                        id: 2,
+                        title: 'Green',
+                        img: activeImg_4_2,
+                    },
+                    {
+                        id: 3,
+                        title: 'Blue',
+                        img: activeImg_4_1,
+                    },
                 ],
+                Capacity: null,
                 quantity_remaining: '3000',
                 // eslint-disable-next-line no-dupe-keys
                 product_reviews: '9 Đánh Giá'
@@ -554,10 +634,23 @@ const dataProduct = [
                 ],
                 sold: '19',
                 color: [
-                    'Black',
-                    'Gold',
-                    'Green'
+                    {
+                        id: 1,
+                        title: 'Black',
+                        img: activeImg_5_1,
+                    },
+                    {
+                        id: 2,
+                        title: 'Gold',
+                        img: activeImg_5_2,
+                    },
+                    {
+                        id: 3,
+                        title: 'Green',
+                        img: activeImg_5_3,
+                    }
                 ],
+                Capacity: null,
                 quantity_remaining: '3000',
                 // eslint-disable-next-line no-dupe-keys
                 product_reviews: '17 Đánh Giá'
@@ -657,11 +750,23 @@ const dataProduct = [
                 ],
                 sold: '6',
                 color: [
-                    'Đen',
-                    'Cream',
-                    'Green',
-                    'Lavender'
+                    {
+                        id: 1,
+                        title: 'Black',
+                        img: activeImg_6_1,
+                    },
+                    {
+                        id: 2,
+                        title: 'Blue',
+                        img: activeImg_6_2,
+                    },
+                    {
+                        id: 3,
+                        title: 'Green',
+                        img: activeImg_6_2,
+                    },
                 ],
+                Capacity: null,
                 quantity_remaining: '3000',
                 // eslint-disable-next-line no-dupe-keys
                 product_reviews: 'Chưa Có Đánh Giá'
@@ -766,10 +871,24 @@ const dataProduct = [
                 ],
                 sold: '6',
                 color: [
-                    'Blue',
-                    'Green',
-                    'Black'
+                    {
+                        id: 1,
+                        title: 'Black',
+                        img: activeImg_7_1,
+                    },
+                    {
+                        id: 2,
+                        title: 'Blue',
+                        img: activeImg_7_2,
+                    },
+                    {
+                        id: 3,
+                        title: 'Green',
+                        img: activeImg_7_3,
+                    },
+
                 ],
+                Capacity: null,
                 quantity_remaining: '3000',
                 // eslint-disable-next-line no-dupe-keys
                 product_reviews: '13 Đánh Giá'
@@ -868,10 +987,23 @@ const dataProduct = [
                 ],
                 sold: '6',
                 color: [
-                    'Xanh Titan',
-                    'Kem Metallic',
-                    'Đen Phantom'
+                    {
+                        id: 1,
+                        title: 'Xanh Titan',
+                        img: activeImg_8_1,
+                    },
+                    {
+                        id: 2,
+                        title: 'Kem Metallic',
+                        img: activeImg_8_2,
+                    },
+                    {
+                        id: 3,
+                        title: 'Đen Phantom',
+                        img: activeImg_8_3,
+                    }
                 ],
+                Capacity: null,
                 quantity_remaining: '3000',
                 // eslint-disable-next-line no-dupe-keys
                 product_reviews: '6 Đánh Giá'
