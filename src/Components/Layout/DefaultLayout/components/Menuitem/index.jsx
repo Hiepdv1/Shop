@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Menuitem.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const cl = classNames.bind(styles);
 
@@ -16,7 +16,7 @@ function Menuitem({ items }) {
                             <li className={cl('menu-item-sub')} key={index}>
                                 <Link
                                     className={cl('menu-item__link-sub')}
-                                    to={items.url}
+                                    to={`/${items.url}`}
                                 >
                                     <div className={cl('menu-item__title-sub')}>
                                         {items.iconLeft}

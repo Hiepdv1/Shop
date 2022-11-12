@@ -35,14 +35,10 @@ const setItem = (item) => {
     return localStorage.setItem('Data_Order', jsonData)
 }
 
-const removeItem = (item) => {
+const removeItem = (index) => {
     const arr = getItem()
 
-    arr.forEach((i, index) => {
-        if (i.id === item) {
-            arr.splice(index, 1)
-        }
-    })
+    arr.splice(index, 1)
 
     const jsonData = JSON.stringify(arr)
 

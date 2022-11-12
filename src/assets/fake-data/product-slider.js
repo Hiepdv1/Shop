@@ -28,7 +28,7 @@ const dataSliderProduct = {
         title: 'iPad Noi Bat',
         content: [
             {
-                id: 1,
+                id: 12,
                 img: img_1,
                 name: 'iPad Pro 12.9 (2021) WIFI 5G 128GB',
                 price: '1.000.000 ₫',
@@ -37,7 +37,7 @@ const dataSliderProduct = {
                 script: 'Giao hàng miễn phí (nếu cách Viettel Store dưới 10km). Bảo hành chính hãng',
             },
             {
-                id: 2,
+                id: 13,
                 img: img_2,
                 name: 'iPad Pro 12.9 (2021) WIFI 5G 128GB',
                 price: '1.000.000 ₫',
@@ -46,7 +46,7 @@ const dataSliderProduct = {
                 script: 'Giao hàng miễn phí (nếu cách Viettel Store dưới 10km). Bảo hành chính hãng',
             },
             {
-                id: 3,
+                id: 14,
                 img: img_3,
                 name: 'iPad Pro 12.9 (2021) WIFI 5G 128GB',
                 price: '1.000.000 ₫',
@@ -55,7 +55,7 @@ const dataSliderProduct = {
                 script: 'Giao hàng miễn phí (nếu cách Viettel Store dưới 10km). Bảo hành chính hãng',
             },
             {
-                id: 4,
+                id: 15,
                 img: img_4,
                 name: 'iPad Pro 12.9 (2021) WIFI 5G 128GB',
                 price: '1.000.000 ₫',
@@ -64,7 +64,7 @@ const dataSliderProduct = {
                 script: 'Giao hàng miễn phí (nếu cách Viettel Store dưới 10km). Bảo hành chính hãng',
             },
             {
-                id: 5,
+                id: 16,
                 img: img_5,
                 name: 'iPad Pro 12.9 (2021) WIFI 5G 128GB',
                 price: '1.000.000 ₫',
@@ -73,7 +73,7 @@ const dataSliderProduct = {
                 script: 'Giao hàng miễn phí (nếu cách Viettel Store dưới 10km). Bảo hành chính hãng',
             },
             {
-                id: 6,
+                id: 17,
                 img: img_6,
                 name: 'iPad Pro 12.9 (2021) WIFI 5G 128GB',
                 price: '1.000.000 ₫',
@@ -82,7 +82,7 @@ const dataSliderProduct = {
                 script: 'Giao hàng miễn phí (nếu cách Viettel Store dưới 10km). Bảo hành chính hãng',
             },
             {
-                id: 7,
+                id: 18,
                 img: img_7,
                 name: 'iPad Pro 12.9 (2021) WIFI 5G 128GB',
                 price: '1.000.000 ₫',
@@ -91,7 +91,7 @@ const dataSliderProduct = {
                 script: 'Giao hàng miễn phí (nếu cách Viettel Store dưới 10km). Bảo hành chính hãng',
             },
             {
-                id: 8,
+                id: 19,
                 img: img_8,
                 name: 'iPad Pro 12.9 (2021) WIFI 5G 128GB',
                 price: '1.000.000 ₫',
@@ -100,7 +100,7 @@ const dataSliderProduct = {
                 script: 'Giao hàng miễn phí (nếu cách Viettel Store dưới 10km). Bảo hành chính hãng',
             },
             {
-                id: 9,
+                id: 20,
                 img: img_9,
                 name: 'iPad Pro 12.9 (2021) WIFI 5G 128GB',
                 price: '1.000.000 ₫',
@@ -109,7 +109,7 @@ const dataSliderProduct = {
                 script: 'Giao hàng miễn phí (nếu cách Viettel Store dưới 10km). Bảo hành chính hãng',
             },
             {
-                id: 10,
+                id: 21,
                 img: img_10,
                 name: 'iPad Pro 12.9 (2021) WIFI 5G 128GB',
                 price: '1.000.000 ₫',

@@ -21,8 +21,8 @@ function Cart() {
         currency: 'VND',
     });
 
-    const handleDeleteOrder = (id) => {
-        ditpatch(deleteOrder(id));
+    const handleDeleteOrder = (index) => {
+        ditpatch(deleteOrder(index));
     };
 
     return (
@@ -64,7 +64,7 @@ function Cart() {
                                         {formatter.format(item.priceInt * item.quantity)}
                                     </div>
                                     <div
-                                        onClick={() => handleDeleteOrder(item.id)}
+                                        onClick={() => handleDeleteOrder(index)}
                                         className={cl('delete-order')}
                                     >
                                         Xóa

@@ -33,7 +33,7 @@
         position: absolute;
         top: 42px;
         width: 230px;
-        min-height: 300px;
+        height: min-content;
         background-color: #FFF;
         padding: 10px 0 10px 10px;
         z-index: 1;
@@ -47,6 +47,16 @@
 
             &:hover .menu-item__title-sub {
                 color: #ee0033;
+
+                svg {
+                    color: #ee0033;
+                }
+            }
+
+            &:hover {
+                svg {
+                    color: #ee0033;
+                }
             }
 
             .menu-item__link-sub {
@@ -61,7 +71,6 @@
 
                 .menu-item__title-sub {
                     svg {
-                        color: #000;
                         padding-right: 1rem;
                         font-size: 2rem;
                     }

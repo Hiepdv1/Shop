@@ -1,0 +1,10 @@
+.small {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+
+    &:hover {
+        background-color: #ed1a35;
+        color: #FFF;
+    }
+}
